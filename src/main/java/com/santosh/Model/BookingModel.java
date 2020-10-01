@@ -87,14 +87,20 @@ public class BookingModel {
             Connection connection = DriverManager.getConnection(jdbc_database, jdbc_username, jdbc_password);
             Statement statement = connection.createStatement();
             ResultSet results = statement.executeQuery("select * from bookings b INNER JOIN cars c USING(platenumber) where b.fromDate between '"+fromDate+"' and '"+toDate+"'");
-            int count=0;
+         //   int count=0;
             int total_payment = 0;
+            long total_time = 0;
             while (results.next()) {
+                Date to_date = results.getDate("todate");
+                Date from_date = results.getDate("fromdate");
+                long diff = to_date.getTime() - from_date.getTime() ;
+                total_time +=  diff;
                 total_payment+=results.getInt("cost");
-                count++;
+            //    count++;
             }
+            long number_of_hours = total_time / 3600000;
             ReportByHour report = new ReportByHour();
-            report.setNo_of_hours(count);
+            report.setNo_of_hours(number_of_hours);
             report.setPayments(total_payment);
             return report;
 
