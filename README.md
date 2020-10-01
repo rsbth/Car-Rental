@@ -46,4 +46,4 @@ create table cars(platenumber varchar(20), carname varchar(20), cost int, fromav
 Users Table:
 create table users(userid varchar(20), username varchar(20));
 
-Screenshots of working application:
+Screenshots of working application found in "screenshots" folder. 
