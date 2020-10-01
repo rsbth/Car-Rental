@@ -5,13 +5,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class ReportByHour {
     private long no_of_hours;
-    private int payments;
+    private long payments;
 
-    public int getPayments() {
+    public long getPayments() {
         return payments;
     }
 
-    public void setPayments(int payments) {
+    public void setPayments(long payments) {
         this.payments = payments;
     }
 

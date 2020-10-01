@@ -101,7 +101,7 @@ public class BookingModel {
             long number_of_hours = total_time / 3600000;
             ReportByHour report = new ReportByHour();
             report.setNo_of_hours(number_of_hours);
-            report.setPayments(total_payment);
+            report.setPayments(total_payment * number_of_hours);
             return report;
 
         }catch (Exception e){

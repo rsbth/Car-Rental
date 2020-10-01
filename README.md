@@ -24,10 +24,21 @@ docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=tiger mysql:8
 
 
 
-Creating Tables: 
+Creating Database and Tables: 
+
+1.docker exec -it <my_sql_container_id/name> /bin/bash
+
+Shell-script setupdb.sh can be used for this purpose or manual instructions below.
+
+Logging into mysql:
+mysql -uroot -ptiger
+
+Creating Database: 
+1.create database app;
+2.use app;
 
 Bookings Table:
-create table booking(bookingid int NOT NULL AUTO_INCREMENT, userid varchar(20), platenumber varchar(20), fromdate date, todate date, PRIMARY KEY (bookingid));
+create table bookings(bookingid int NOT NULL AUTO_INCREMENT, userid varchar(20), platenumber varchar(20), fromdate date, todate date, PRIMARY KEY (bookingid));
 
 Cars Table:
 create table cars(platenumber varchar(20), carname varchar(20), cost int, fromavailable date, toavailable date);
@@ -35,3 +46,4 @@ create table cars(platenumber varchar(20), carname varchar(20), cost int, fromav
 Users Table:
 create table users(userid varchar(20), username varchar(20));
 
+Screenshots of working application:
