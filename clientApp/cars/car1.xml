@@ -1,0 +1,7 @@
+<car>
+    <model>Tesla Model S</model>
+    <plateNumber>JHFDDS12</plateNumber>
+    <price>100</price>
+    <from>2020-10-11T00:00:00Z</from>
+    <to>2020-10-15T00:00:00Z</to>
+</car>

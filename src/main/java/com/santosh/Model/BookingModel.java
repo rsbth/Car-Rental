@@ -10,7 +10,7 @@ import java.util.List;
 
 public class BookingModel {
     private List<Booking> bookings = new ArrayList<Booking>();;
-    private String jdbc_database = "jdbc:mysql://192.168.99.100:3306/app";
+    private String jdbc_database = "jdbc:mysql://localhost:3306/app";
     private String jdbc_username = "root";
     private String jdbc_password = "tiger";
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UserModel {
     private List<User> users = new ArrayList<User>();;
-    private String jdbc_database = "jdbc:mysql://192.168.99.100:3306/app";
+    private String jdbc_database = "jdbc:mysql://localhost:3306/app";
     private String jdbc_username = "root";
     private String jdbc_password = "tiger";
 
